@@ -17,6 +17,7 @@ import tornado.locale
 
 from controller import handlers
 from lib.default import *
+from lib.oid import *
 from config import settings
 
 if __name__ == '__main__':
@@ -30,6 +31,18 @@ if __name__ == '__main__':
 	print 'Sarting Server...'
 
 	handlers = [
+		(r'/accept?', AcceptHandler),
+		(r'/associate?', AssociateHandler),
+		(r'/authorize?', AuthorizeHandler),
+		(r'/cancel?', CancelHandler),
+		(r'/checkid_immediate?', CheckidImmediateHandler),
+		(r'/checkid_setup?', CheckidSetupHandler),
+		(r'/check_authentication?', CheckAuthenticationHandler),
+		(r'/error?', ErrorHandler),
+		(r'/id_res?', IdResHandller),
+		(r'/login?', LoginHandler),
+		(r'/logout?', LogoutHandler),
+		(r'/test?', TestHandler),
 		(r'/(.*)', BaseHandler),
 	]
 	

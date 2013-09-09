@@ -14,5 +14,8 @@ SERVER = {
 
 	'lang_path': './lang/',
 
+	#'openid.assoc': 'HMAC-SHA1',
+	'openid.assoc': 'HMAC-SHA256',
+
 	'port': 8000,
 }
